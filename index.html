@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Reston — a modern restaurant serving thoughtfully crafted food in a warm and elegant atmosphere.">
+
+    <title>Reston — Modern Restaurant</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+        <div class="video-modal__overlay"></div>
+
+        <div class="video-modal__content">
+            <button class="video-modal__close" id="videoModalClose" type="button" aria-label="Close video">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <video id="restaurantVideo" class="restaurant-video" controls playsinline preload="metadata">
+                <source src="assets/restaurant-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <!-- Top Information Bar -->
+        <div class="top-bar">
+
+            <div class="top-bar__address">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>123 Restaurant Street, Ahmedabad</span>
+            </div>
+
+            <div class="top-bar__contact">
+
+                <a href="mailto:hello@reston.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    hello@reston.com
+                </a>
+
+                <a href="tel:+919876543210">
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Main Navigation -->
+        <div class="navbar">
+
+            <a href="#home" class="logo">
+                <span class="logo__main">RESTON</span>
+                <span class="logo__sub">RESTAURANT</span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Primary navigation">
+
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#reservation" class="nav-link">Reservation</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </nav>
+
+
+            <div class="navbar__actions">
+
+                <button class="btn btn--outline navbar__book-btn" data-open-reservation>
+                    Book a Table
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu"
+                    aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+
+            <a href="#home" class="mobile-nav__link">Home</a>
+            <a href="#about" class="mobile-nav__link">About</a>
+            <a href="#menu" class="mobile-nav__link">Menu</a>
+            <a href="#gallery" class="mobile-nav__link">Gallery</a>
+            <a href="#reservation" class="mobile-nav__link">Reservation</a>
+            <a href="#contact" class="mobile-nav__link">Contact</a>
+
+            <button class="btn btn--primary mobile-nav__book" data-open-reservation>
+                Book a Table
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero__overlay"></div>
+
+            <div class="hero__content">
+
+                <span class="section-label hero__label">
+                    EST. 2018 · AHMEDABAD
+                </span>
+
+                <h1 class="hero__title">
+                    Where every
+                    <span>flavour</span>
+                    tells a story.
+                </h1>
+
+                <p class="hero__description">
+                    Seasonal ingredients, thoughtful cooking and
+                    unforgettable moments served at your table.
+                </p>
+
+                <div class="hero__actions">
+
+                    <a href="#menu" class="btn btn--primary">
+                        Explore Menu
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <button class="btn btn--ghost" data-open-reservation>
+                        Book a Table
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Scroll Indicator -->
+            <a href="#about" class="hero__scroll">
+
+                <span>Scroll to explore</span>
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </a>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT / RESTAURANT STORY
+        ====================================================== -->
+
+        <section class="about section" id="about">
+
+            <div class="about__container">
+
+                <div class="about__content">
+
+                    <span class="section-label">
+                        Our Story
+                    </span>
+
+                    <h2 class="section-title">
+                        A place where
+                        <em>food</em>
+                        meets feeling.
+                    </h2>
+
+                    <p class="about__lead">
+                        Reston was created around one simple idea:
+                        good food should feel personal.
+                    </p>
+
+                    <p class="about__text">
+                        From carefully selected ingredients to the final
+                        plate, everything we serve is prepared with
+                        patience, creativity and attention to detail.
+                        Our kitchen brings together familiar flavours
+                        with modern techniques to create food that feels
+                        both exciting and comforting.
+                    </p>
+
+                    <a href="#menu" class="text-link">
+                        Discover our menu
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="about__visual">
+
+                    <div class="about__image about__image--main">
+                        <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/about-2.jpg"
+                            alt="Elegant restaurant interior" loading="lazy">
+                    </div>
+
+                    <div class="about__image about__image--small">
+                        <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/about-1.jpg"
+                            alt="Restaurant dining area" loading="lazy">
+                    </div>
+
+                    <div class="about__experience">
+                        <strong>08</strong>
+                        <span>Years of<br>experience</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FEATURED FOOD
+        ====================================================== -->
+
+        <section class="featured-food section section--dark">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    From Our Kitchen
+                </span>
+
+                <h2 class="section-title section-title--light">
+                    Made to be
+                    <em>remembered.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <!-- Card 1 -->
+                <article class="food-card food-card--large">
+
+                    <div class="food-card__image">
+
+                        <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-5.jpg"
+                            alt="Signature restaurant dish" loading="lazy">
+
+                    </div>
+
+                    <div class="food-card__content">
+
+                        <span class="food-card__number">01</span>
+
+                        <h3>Signature Flavours</h3>
+
+                        <p>
+                            Our chef's favourite creations,
+                            inspired by seasonal ingredients.
+                        </p>
+
+                        <a href="#menu" class="text-link text-link--light">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 2 -->
+                <article class="food-card">
+
+                    <div class="food-card__image">
+
+                        <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-6.jpg"
+                            alt="Classic restaurant dish" loading="lazy">
+
+                    </div>
+
+                    <div class="food-card__content">
+
+                        <span class="food-card__number">02</span>
+
+                        <h3>Classic Plates</h3>
+
+                        <p>
+                            Familiar flavours elevated
+                            with a modern touch.
+                        </p>
+
+                        <a href="#menu" class="text-link text-link--light">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Card 3 -->
+                <article class="food-card">
+
+                    <div class="food-card__image">
+
+                        <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-7.jpg"
+                            alt="Chef special dish" loading="lazy">
+
+                    </div>
+
+                    <div class="food-card__content">
+
+                        <span class="food-card__number">03</span>
+
+                        <h3>Chef Specials</h3>
+
+                        <p>
+                            Limited creations that change
+                            with the season.
+                        </p>
+
+                        <a href="#menu" class="text-link text-link--light">
+                            Explore
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MENU
+        ====================================================== -->
+
+        <section class="menu-section section" id="menu">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    Discover Our Menu
+                </span>
+
+                <h2 class="section-title">
+                    Something for
+                    <em>everyone.</em>
+                </h2>
+
+                <p class="section-description">
+                    Explore our selection of carefully prepared
+                    dishes, made with fresh ingredients.
+                </p>
+
+            </div>
+
+
+            <!-- Menu Filter -->
+            <div class="menu-filter" role="tablist" aria-label="Menu categories">
+
+                <button class="menu-filter__btn active" data-category="all" role="tab">
+                    All
+                </button>
+
+                <button class="menu-filter__btn" data-category="starter" role="tab">
+                    Starters
+                </button>
+
+                <button class="menu-filter__btn" data-category="main" role="tab">
+                    Main Course
+                </button>
+
+                <button class="menu-filter__btn" data-category="dessert" role="tab">
+                    Desserts
+                </button>
+
+                <button class="menu-filter__btn" data-category="drinks" role="tab">
+                    Drinks
+                </button>
+
+            </div>
+
+
+            <!-- Menu Items -->
+            <div class="menu-grid" id="menuGrid">
+
+                <!-- Starter -->
+                <article class="menu-item" data-category="starter">
+
+                    <div class="menu-item__info">
+
+                        <div>
+                            <span class="menu-item__category">
+                                Starter
+                            </span>
+
+                            <h3>Moussaka Noodles</h3>
+
+                            <p>
+                                Chicken · Apple · Tomatoes
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            ₹495
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Starter -->
+                <article class="menu-item" data-category="starter">
+
+                    <div class="menu-item__info">
+
+                        <div>
+                            <span class="menu-item__category">
+                                Starter
+                            </span>
+
+                            <h3>Crispy Calamari</h3>
+
+                            <p>
+                                Lemon · Herbs · Garlic
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            ₹560
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Main -->
+                <article class="menu-item" data-category="main">
+
+                    <div class="menu-item__info">
+
+                        <div>
+                            <span class="menu-item__category">
+                                Main Course
+                            </span>
+
+                            <h3>Pad Thai</h3>
+
+                            <p>
+                                Rice noodles · Vegetables · Peanuts
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            ₹620
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Main -->
+                <article class="menu-item" data-category="main">
+
+                    <div class="menu-item__info">
+
+                        <div>
+                            <span class="menu-item__category">
+                                Main Course
+                            </span>
+
+                            <h3>Chicken Roast</h3>
+
+                            <p>
+                                Herbs · Roasted vegetables · Jus
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            ₹750
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Main -->
+                <article class="menu-item" data-category="main">
+
+                    <div class="menu-item__info">
+
+                        <div>
+                            <span class="menu-item__category">
+                                Main Course
+                            </span>
+
+                            <h3>Beef Pho</h3>
+
+                            <p>
+                                Rice noodles · Herbs · Broth
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            ₹680
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Dessert -->
+                <article class="menu-item" data-category="dessert">
+
+                    <div class="menu-item__info">
+
+                        <div>
+                            <span class="menu-item__category">
+                                Dessert
+                            </span>
+
+                            <h3>Chocolate Tart</h3>
+
+                            <p>
+                                Dark chocolate · Cream · Berries
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            ₹390
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Dessert -->
+                <article class="menu-item" data-category="dessert">
+
+                    <div class="menu-item__info">
+
+                        <div>
+                            <span class="menu-item__category">
+                                Dessert
+                            </span>
+
+                            <h3>Vanilla Panna Cotta</h3>
+
+                            <p>
+                                Vanilla · Seasonal fruits
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            ₹350
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Drinks -->
+                <article class="menu-item" data-category="drinks">
+
+                    <div class="menu-item__info">
+
+                        <div>
+                            <span class="menu-item__category">
+                                Drinks
+                            </span>
+
+                            <h3>Signature Lemonade</h3>
+
+                            <p>
+                                Lemon · Mint · Ginger
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            ₹220
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             VIDEO / EXPERIENCE
+        ====================================================== -->
+
+        <section class="experience">
+
+            <div class="experience__overlay"></div>
+
+            <div class="experience__content">
+
+                <span class="section-label section-label--light">
+                    The Reston Experience
+                </span>
+
+                <h2>
+                    Good food.
+                    <br>
+                    Great company.
+                    <br>
+                    <em>Beautiful moments.</em>
+                </h2>
+
+                <button class="play-btn" id="playVideoBtn" aria-label="Play restaurant video">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GALLERY
+        ====================================================== -->
+
+        <section class="gallery section" id="gallery">
+            <div class="lightbox" id="lightbox">
+
+                <div class="lightbox__overlay"></div>
+
+                <div class="lightbox__content">
+
+                    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close image">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                    <img id="lightboxImage" src="" alt="">
+
+                </div>
+
+            </div>
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    Inside Reston
+                </span>
+
+                <h2 class="section-title">
+                    A little glimpse
+                    <em>inside.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <button class="gallery-item gallery-item--large"
+                    data-image="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/about-2.jpg"
+                    aria-label="Open gallery image">
+                    <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/about-2.jpg"
+                        alt="Reston interior" loading="lazy">
+                </button>
+
+
+                <button class="gallery-item"
+                    data-image="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-5.jpg"
+                    aria-label="Open gallery image">
+                    <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-5.jpg"
+                        alt="Reston signature dish" loading="lazy">
+                </button>
+
+
+                <button class="gallery-item"
+                    data-image="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-6.jpg"
+                    aria-label="Open gallery image">
+                    <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-6.jpg"
+                        alt="Reston food" loading="lazy">
+                </button>
+
+
+                <button class="gallery-item"
+                    data-image="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-7.jpg"
+                    aria-label="Open gallery image">
+                    <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/dishes-7.jpg"
+                        alt="Reston chef special" loading="lazy">
+                </button>
+
+
+                <button class="gallery-item"
+                    data-image="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/about-1.jpg"
+                    aria-label="Open gallery image">
+                    <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/about-1.jpg"
+                        alt="Reston dining area" loading="lazy">
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RESERVATION
+        ====================================================== -->
+
+        <section class="reservation" id="reservation">
+
+            <div class="reservation__image">
+
+                <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/reservation-1.jpg"
+                    alt="Restaurant table prepared for reservation" loading="lazy">
+
+            </div>
+
+
+            <div class="reservation__content">
+
+                <span class="section-label section-label--light">
+                    Your Table Awaits
+                </span>
+
+                <h2>
+                    Make tonight
+                    <em>special.</em>
+                </h2>
+
+                <p>
+                    Join us for an evening of thoughtful food,
+                    warm hospitality and memorable moments.
+                </p>
+
+                <button class="btn btn--outline-light" data-open-reservation>
+                    Book Your Table
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="reservation__phone">
+
+                    <span>Telephone Reservation</span>
+
+                    <a href="tel:+919876543210">
+                        +91 98765 43210
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="reservation__image">
+
+                <img src="https://july.finestwp.com/newwp/reston/wp-content/uploads/2024/10/reservation-2.jpg"
+                    alt="Restaurant dining experience" loading="lazy">
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section class="contact section" id="contact">
+
+            <div class="contact__container">
+
+                <div class="contact__content">
+
+                    <span class="section-label">
+                        Visit Reston
+                    </span>
+
+                    <h2 class="section-title">
+                        Come hungry.
+                        <br>
+                        Leave <em>happy.</em>
+                    </h2>
+
+                    <div class="contact__details">
+
+                        <div class="contact__item">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <div>
+                                <span>Address</span>
+                                <p>
+                                    123 Restaurant Street,<br>
+                                    Ahmedabad, Gujarat
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact__item">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <div>
+                                <span>Phone</span>
+                                <a href="tel:+919876543210">
+                                    +91 98765 43210
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact__item">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <div>
+                                <span>Email</span>
+                                <a href="mailto:hello@reston.com">
+                                    hello@reston.com
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact__hours">
+
+                    <span class="section-label">
+                        Opening Hours
+                    </span>
+
+                    <div class="hours-row">
+                        <span>Monday — Thursday</span>
+                        <strong>10:00 AM — 11:00 PM</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Friday — Saturday</span>
+                        <strong>10:00 AM — 12:00 AM</strong>
+                    </div>
+
+                    <div class="hours-row">
+                        <span>Sunday</span>
+                        <strong>10:00 AM — 10:00 PM</strong>
+                    </div>
+
+                    <p class="hours-note">
+                        Kitchen closes 30 minutes before closing time.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer__top">
+
+            <div class="footer__brand">
+
+                <a href="#home" class="logo logo--footer">
+                    <span class="logo__main">RESTON</span>
+                    <span class="logo__sub">RESTAURANT</span>
+                </a>
+
+                <p>
+                    Thoughtful food, warm hospitality and
+                    memorable experiences.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer__newsletter">
+
+                <span class="section-label section-label--light">
+                    Stay Connected
+                </span>
+
+                <h3>
+                    Get our latest
+                    <em>updates.</em>
+                </h3>
+
+                <form class="newsletter-form" id="newsletterForm">
+
+                    <label for="newsletterEmail" class="sr-only">
+                        Email address
+                    </label>
+
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+
+                    <button type="submit" aria-label="Subscribe">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <p class="newsletter-message" id="newsletterMessage"></p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer__bottom">
+
+            <p>
+                © 2026 Reston Restaurant. All rights reserved.
+            </p>
+
+            <div class="footer__links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         RESERVATION MODAL
+    ====================================================== -->
+
+    <div class="modal" id="reservationModal" aria-hidden="true">
+
+        <div class="modal__overlay" data-close-modal></div>
+
+        <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="reservationTitle">
+
+            <button class="modal__close" id="closeReservation" aria-label="Close reservation form">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <span class="section-label">
+                Reservations
+            </span>
+
+            <h2 id="reservationTitle">
+                Reserve your
+                <em>table.</em>
+            </h2>
+
+            <p>
+                Choose your preferred date, time and number of guests.
+            </p>
+
+
+            <form class="reservation-form" id="reservationForm">
+
+                <div class="form-group">
+
+                    <label for="guestName">
+                        Full Name
+                    </label>
+
+                    <input type="text" id="guestName" name="guestName" placeholder="Your name" required>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="guestDate">
+                            Date
+                        </label>
+
+                        <input type="date" id="guestDate" name="guestDate" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="guestTime">
+                            Time
+                        </label>
+
+                        <input type="time" id="guestTime" name="guestTime" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="guestCount">
+                            Guests
+                        </label>
+
+                        <select id="guestCount" name="guestCount" required>
+                            <option value="">Select</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8+ Guests</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="guestPhone">
+                            Phone
+                        </label>
+
+                        <input type="tel" id="guestPhone" name="guestPhone" placeholder="+91" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="guestMessage">
+                        Special Request
+                        <span>(Optional)</span>
+                    </label>
+
+                    <textarea id="guestMessage" name="guestMessage" rows="3"
+                        placeholder="Birthday, anniversary, dietary requirements..."></textarea>
+
+                </div>
+
+
+                <button type="submit" class="btn btn--primary reservation-form__submit">
+                    Confirm Reservation
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p class="form-message" id="reservationMessage"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         IMAGE LIGHTBOX
+    ====================================================== -->
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+
+        <div class="lightbox__overlay" data-close-lightbox></div>
+
+        <div class="lightbox__content">
+
+            <button class="lightbox__close" id="closeLightbox" aria-label="Close image">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <img src="" alt="Gallery preview" id="lightboxImage">
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         VIDEO MODAL
+    ====================================================== -->
+
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+
+        <div class="video-modal__overlay" data-close-video></div>
+
+        <div class="video-modal__content">
+
+            <button class="video-modal__close" id="closeVideo" aria-label="Close video">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="video-placeholder">
+
+                <i class="fa-solid fa-play"></i>
+
+                <p>
+                    Restaurant experience video
+                    <br>
+                    coming soon.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
